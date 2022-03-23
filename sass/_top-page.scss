@@ -1,0 +1,93 @@
+/* =======================================================
+
+top
+トップページ
+
+======================================================== */
+
+.top_hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url(../img/top/hero_image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 760px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero_cta {
+  margin-top: 60px;
+}
+
+.hero_illustration {
+  max-width: 630px;
+  width: 100%;
+}
+
+.news_headBlock {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+
+  .news_link {
+    display: block;
+  }
+
+  .news_list {
+    display: flex;
+  }
+
+  .news_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .news_date {
+    font-size: 1.4rem;
+    margin-right: 20px;
+  }
+}
+
+.top_news {
+  .news_link {
+    padding: 15px;
+    display: block;
+    &:hover {
+      opacity: 1;
+      background-color: $light-color;
+    }
+  }
+
+  .top_newsList {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .news_title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 250px;
+  }
+
+  .news_block {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .news_date {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+
+  .news_contents {
+    margin-left: 30px;
+  }
+
+  .btn_wrapper {
+    margin: 80px auto 0;
+  }
+}

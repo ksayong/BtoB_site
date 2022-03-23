@@ -1,0 +1,137 @@
+/* =======================================================
+
+common
+共通
+
+======================================================== */
+
+.wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section_headBlock {
+}
+
+.inner {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include mq-down(md) {
+    width: auto;
+    padding: 0 14px;
+  }
+}
+
+.pointColor_main {
+  color: $main-color;
+}
+
+.small_head {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $font-gray;
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.border_block {
+  padding: 50px;
+  border: 2px solid rgb(189, 179, 179);
+  margin: 0 auto;
+}
+
+.common_head {
+  font-size: 2.8rem;
+  text-align: left;
+  margin-bottom: 50px;
+  @include mq-down(md) {
+    font-size: 1.8rem;
+  }
+
+  span {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+.center_text {
+  text-align: center;
+}
+
+.card_list {
+  display: flex;
+  justify-content: space-between;
+
+  &.colum03 {
+    .card_listItem {
+      width: calc((100% - 40px) / 3);
+    }
+  }
+}
+
+//button
+
+.cta_button {
+  display: block;
+  padding: 18px 32px;
+}
+
+.cta_area {
+  display: flex;
+}
+
+.cta_contents {
+  align-items: center;
+  color: $font-white;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  width: 50%;
+  position: relative;
+
+  &.document {
+    background-image: url(/img/top/building.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: #006954;
+      opacity: 0.6;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &.tel {
+    background-color: $main-color;
+  }
+}

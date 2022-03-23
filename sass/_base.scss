@@ -1,0 +1,80 @@
+//font宣言
+$NotoSans: "Noto Sans JP", sans-serif;
+$Poppins: "Poppins", sans-serif;
+
+//テキストカラー
+$font-black: #222222;
+$font-gray: #5a5a5a;
+$font-white: #ffffff;
+
+$main-color: #00a585;
+$sub-color: #5cc3af;
+$light-color: #e2f8f0;
+$point-color: #c1a86d;
+
+//フォントサイズ 基準設定 1.0rem = 10px
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-feature-settings: "palt"; /* カーニング */
+  -webkit-text-size-adjust: 100%;
+  font-family: $NotoSans;
+  color: $font-black;
+}
+
+p {
+  color: $font-black;
+  font-size: 1.6rem;
+  line-height: 2em;
+  letter-spacing: 0.025em;
+  @include mq-down(md) {
+    font-size: 1.4rem;
+  }
+}
+
+a {
+  font-size: 1.6rem;
+  display: inline-block;
+  color: $font-black;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: 0.8s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include mq-down(md) {
+    font-size: 1.4rem;
+  }
+}
+
+img {
+  height: auto;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: block;
+}
+
+@include mq-down(md) {
+  .pc {
+    display: none !important;
+  }
+}
+@include mq-up(md) {
+  .sp {
+    display: none !important;
+  }
+}
