@@ -4,9 +4,11 @@ header
 ヘッダー
 
 ======================================================== */
-
 header {
-  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  background-color: #ffffffd0;
+  top: 0;
 }
 
 .header_inner {
@@ -14,25 +16,103 @@ header {
   justify-content: space-between;
 }
 
-.header_nav {
+.header_logo {
   display: flex;
   align-items: center;
+  padding: 0 40px;
+}
+
+.header_nav {
+  display: flex;
   ul {
     display: flex;
   }
 }
 
 .header_menuList {
+  margin-right: 50px;
+}
+
+.header_ctalistItem {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  a {
+    color: $font-white;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  &.tel {
+    background-color: $sub-color;
+    a {
+      font-family: $Poppins;
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding-left: 35px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../img/common/ico_tel.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+      }
+    }
+    span {
+      margin-top: -3px;
+      display: block;
+      font-size: 1.2rem;
+      font-family: $NotoSans;
+      font-weight: 500;
+    }
+  }
+
+  &.document {
+    background-color: $main-color;
+  }
+
+  &.contact {
+    background-color: $point-color;
+  }
 }
 
 .header_menuListItem {
+  align-items: center;
+  display: flex;
+  padding: 30px 0;
   &:not(:last-of-type) {
-    margin-right: 20px;
+    margin-right: 30px;
+  }
+
+  &.current {
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 8px;
+      background-color: $main-color;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+
+    a {
+      color: $main-color;
+    }
   }
 
   a {
+    font-weight: 600;
+    font-size: 1.5rem;
     display: block;
-    font-size: 1.6rem;
     @include mq-down(md) {
       font-size: 1.2rem;
     }

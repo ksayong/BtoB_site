@@ -109,13 +109,18 @@ common
   padding: 100px;
   width: 50%;
   position: relative;
+  z-index: 10;
+
+  a,
+  p {
+    color: $font-white;
+  }
 
   &.document {
     background-image: url(/img/top/building.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: -2;
     &:before {
       content: "";
       width: 100%;
